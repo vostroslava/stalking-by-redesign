@@ -1504,3 +1504,226 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   Training Pages
+   ========================================== */
+
+.training-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.training-main {
+    flex: 1;
+}
+
+.training-sidebar {
+    flex-shrink: 0;
+}
+
+.training-block {
+    margin: var(--spacing-xl) 0;
+}
+
+.training-block h3 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.check-list {
+    list-style: none;
+    margin-top: var(--spacing-md);
+}
+
+.check-list li {
+    padding: var(--spacing-xs) 0 var(--spacing-xs) 2rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.program-list {
+    margin-top: var(--spacing-md);
+}
+
+.program-item {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.program-item h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.program-item ul {
+    list-style: none;
+}
+
+.program-item ul li {
+    padding: var(--spacing-xs) 0 var(--spacing-xs) 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.program-item ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.results-list {
+    list-style: none;
+}
+
+.results-list li {
+    padding: var(--spacing-sm) 0 var(--spacing-sm) 2rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.results-list li::before {
+    content: '🎯';
+    position: absolute;
+    left: 0;
+}
+
+.format-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.format-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-md);
+}
+
+.format-icon {
+    font-size: 2rem;
+}
+
+.format-info strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.format-info p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.sidebar-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.sidebar-card h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.dates-list {
+    margin-bottom: var(--spacing-md);
+}
+
+.date-item {
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.date-item strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.date-item p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.related-links {
+    list-style: none;
+}
+
+.related-links li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.related-links li:last-child {
+    border-bottom: none;
+}
+
+.related-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+.related-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.highlight-block {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
+    border-left: 4px solid var(--accent-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+}
+
+.highlight-block h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .training-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .training-sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .format-grid {
+        grid-template-columns: 1fr;
+    }
+}
