@@ -16,12 +16,12 @@
     --text-light: #757575;
     --white: #ffffff;
     --border-color: #e0e0e0;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #1a237e 0%, #283593 100%);
     --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #f4511e 100%);
     --gradient-overlay: linear-gradient(135deg, rgba(26, 35, 126, 0.9) 0%, rgba(40, 53, 147, 0.85) 100%);
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -29,22 +29,22 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-xxl: 4rem;
-    
+
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
-    
+
     /* Borders */
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 16px;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.2);
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -136,7 +136,8 @@ button {
 }
 
 .logo-icon {
-    font-size: 2rem;
+    width: 50px;
+    height: 50px;
 }
 
 .header-contacts {
@@ -220,6 +221,9 @@ button {
     align-items: center;
     justify-content: center;
     background: var(--gradient-primary);
+    background-image: url('img/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -230,7 +234,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
@@ -259,6 +263,7 @@ button {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -370,8 +375,18 @@ button {
 }
 
 .card-icon {
-    font-size: 3rem;
+    width: 120px;
+    height: 120px;
     margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .card-title {
@@ -616,7 +631,7 @@ button {
     line-height: 1.7;
 }
 
-.about-content > .btn {
+.about-content>.btn {
     display: block;
     margin: 0 auto;
     max-width: 300px;
@@ -758,66 +773,66 @@ button {
         --spacing-xl: 2rem;
         --spacing-xxl: 2.5rem;
     }
-    
+
     .header-contacts {
         display: none;
     }
-    
+
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .nav {
         display: none;
     }
-    
+
     .nav.active {
         display: block;
     }
-    
+
     .nav-list {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .nav-list li {
         border-bottom: 1px solid var(--border-color);
     }
-    
+
     .nav-list a {
         display: block;
         padding: var(--spacing-md);
     }
-    
+
     .hero {
         min-height: 500px;
     }
-    
+
     .cards-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .stats-brands {
         grid-template-columns: 1fr;
     }
-    
+
     .schedule-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .directions-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .schedule-cta {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .schedule-cta .btn {
         width: 100%;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
@@ -828,15 +843,15 @@ button {
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .schedule-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .directions-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -847,18 +862,20 @@ button {
    ========================================== */
 
 @media (prefers-reduced-motion: no-preference) {
+
     .card,
     .event-card,
     .direction-item,
     .brand-item {
         animation: fadeIn 0.6s ease-out;
     }
-    
+
     @keyframes fadeIn {
         from {
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);

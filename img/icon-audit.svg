@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="iconGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#283593;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" fill="url(#iconGrad1)" rx="20"/>
+  
+  <!-- Magnifying glass with team -->
+  <g transform="translate(60, 60)">
+    <circle cx="0" cy="-5" r="25" fill="none" stroke="#1a237e" stroke-width="4"/>
+    <line x1="18" y1="18" x2="30" y2="30" stroke="#1a237e" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Three people silhouettes inside magnifying glass -->
+    <g transform="scale(0.4)">
+      <circle cx="-15" cy="-8" r="6" fill="#ff6b35"/>
+      <path d="M -15,-2 Q -20,5 -20,10 L -10,10 Q -10,5 -15,-2 Z" fill="#ff6b35"/>
+      
+      <circle cx="0" cy="-12" r="6" fill="#1a237e"/>
+      <path d="M 0,-6 Q -5,1 -5,6 L 5,6 Q 5,1 0,-6 Z" fill="#1a237e"/>
+      
+      <circle cx="15" cy="-8" r="6" fill="#ff6b35"/>
+      <path d="M 15,-2 Q 10,5 10,10 L 20,10 Q 20,5 15,-2 Z" fill="#ff6b35"/>
+    </g>
+    
+    <!-- Checkmark -->
+    <path d="M -10,5 L -5,10 L 5,-5" stroke="#ff6b35" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
